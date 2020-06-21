@@ -1,7 +1,7 @@
 <!--
  * @Author: reol
  * @Date: 2020-06-20 14:09:25
- * @LastEditTime: 2020-06-21 16:30:29
+ * @LastEditTime: 2020-06-21 22:28:36
  * @LastEditors: reol
  * @FilePath: \justasuka.github.io\index.html
 --> 
@@ -11,10 +11,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>just Asuka</title>
-    <script src="js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="css/blog.css" >
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
     
@@ -38,14 +38,29 @@
 
 
             <div class="section">
-                
+                <ul>
+                    <li>
+                        <a href="2020/build_a_blog/index.html" title="利用GitHub建立blog">
+                        <div class="title" >使用GitHub建立blog</div>
+                        <div>
+                            <p>
+                                GitHub作为全球最大的程序员交友网站，是一个代码托管平台和开发者社区，开发者可以在Github上创建自己的开源项目并与其他开发者协作编码。
+                            </p>
+                        </div>
+                        <div class="p_time">
+                            <p>2020-06-21</p>
+                        </div>
+                        </a>
+
+                    </li>
+                </ul>
             </div>
         </div>
 
     </div>
     <div class="footer" id="app">
         <div>This blog is running： {{ countDownList }} (๑╹ヮ╹๑)ﾉ</div>
-        <p>人与人的悲喜并不相通</p>
+        <p>{{ letter }}</p>
     </div>
 
     <div class="sideBar">
@@ -56,5 +71,5 @@
 
 </body>
 <script src="js/js.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
 </html>

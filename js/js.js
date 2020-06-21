@@ -79,13 +79,24 @@ var app = new Vue({
     el:'#app',
 　　data() {
 　　　　return {
-　　　　　　countDownList: '00天00时00分00秒',
-            startime: '2020-6-18 18:53:00'
+　　　　    countDownList: '00天00时00分00秒',
+            startime: '2020-6-20 18:53:00',
+            letter_list : [
+                "人与人的悲喜并不相通",
+                "I've seen things you people wouldn't believe.",
+                "Attack ships on fire off the shoulder of Orion.",
+                "I watched c-beams glitter in the dark near the Tanhauser Gate.",
+                "All those...moments will be lost...in time.",
+                "Like...tears...in rain.Time...to die"
+
+            ],
+            letter:"日月忽其不淹兮，春与秋其代序"
 
 　　　　};
 　　},
 　　created() {
 　　　　this.countDown();
+        this.creed();
 
 　　},
 
@@ -113,10 +124,13 @@ var app = new Vue({
 　　　　　　　　　　};
 　　　　　　　　this.countDownList = obj.day + ' day ' + obj.hou + ' hour ' + obj.min + ' minute ' + obj.sec + ' second ';
 　　　　　　}, 1000);
-　　　　}
-　　}
-        
-        
+　　　　},
+    creed() {
+        let this_time = new Date().getMinutes();
+        let key = Math.floor((this_time/10))
+        this.letter = this.letter_list[key]
 
+    }
+　　}
 })
 
