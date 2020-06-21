@@ -4,11 +4,14 @@ document.addEventListener("visibilitychange", function(){
     // document.title = document.hidden ? "(oﾟvﾟ)ノHi-monika" : "♪(′∇`*)-欢迎回来";
     if (document.hidden ) {
         setTimeout(function(){
-            document.title = "(oﾟvﾟ)ノHi-~~~~~~~~~~~~~~~~~"
+            // document.title = "(oﾟvﾟ)ノHi-~~~~~~~~~~~~~~~~~"
+             document.title = "(。・_・)/~~Hi~~~~~~~~~~~~~~~~~"
+
         },2000)
     }
     else {
-        document.title =  "♪(′∇`*)-欢迎回来"
+        // document.title =  "♪(′∇`*)-欢迎回来"
+        document.title =  "ヾ(❀╹◡╹)ﾉﾞ❀~-欢迎回来"
         setTimeout(function(){
             document.title = 'just Monika'
 
@@ -18,7 +21,6 @@ document.addEventListener("visibilitychange", function(){
 
 
 // console.log(document.body.clientHeight)
-
 
 //? 获取&&设置-页面垂直滚动值
 
@@ -78,7 +80,8 @@ var app = new Vue({
 　　data() {
 　　　　return {
 　　　　　　countDownList: '00天00时00分00秒',
-　　　　　　actEndTime: '2018-11-19 18:50:00'
+            startime: '2020-6-18 18:53:00'
+
 　　　　};
 　　},
 　　created() {
@@ -92,35 +95,23 @@ var app = new Vue({
 　　　　},
 　　　　countDown(it) {
 　　　　　　var interval = setInterval(() => {
-　　　　　　　　// 获取当前时间，同时得到活动结束时间数组
 　　　　　　　　let newTime = new Date().getTime();
-　　　　　　　　// 对结束时间进行处理渲染到页面
-　　　　　　　　let endTime = new Date(this.actEndTime).getTime();
+　　　　　　　　let endTime = new Date(this.startime).getTime();
 　　　　　　　　let obj = null;
-　　　　　　　　// 如果活动未结束，对时间进行处理
-　　　　　　　　if (endTime - newTime > 0) {
-　　　　　　　　　　let time = (endTime - newTime) / 1000;
+　　　　　　　　　　let time = (newTime - endTime) / 1000;
 　　　　　　　　　　// 获取天、时、分、秒
 　　　　　　　　　　let day = parseInt(time / (60 * 60 * 24));
 　　　　　　　　　　let hou = parseInt(time % (60 * 60 * 24) / 3600);
 　　　　　　　　　　let min = parseInt(time % (60 * 60 * 24) % 3600 / 60);
 　　　　　　　　　　let sec = parseInt(time % (60 * 60 * 24) % 3600 % 60);
 　　　　　　　　　　obj = {
-　　　　　　　　　　　　day: this.timeFormat(day),
+　　　　　　　　　　　　//day: this.timeFormat(day),
+                        day:day,
 　　　　　　　　　　　　hou: this.timeFormat(hou),
 　　　　　　　　　　　　min: this.timeFormat(min),
 　　　　　　　　　　　　sec: this.timeFormat(sec)
 　　　　　　　　　　};
-　　　　　　　　} else { // 活动已结束，全部设置为'00'
-　　　　　　　　　　obj = {
-　　　　　　　　　　　　day: '00',
-　　　　　　　　　　　　hou: '00',
-　　　　　　　　　　　　min: '00',
-　　　　　　　　　　　　sec: '00'
-　　　　　　　　　　};
-　　　　　　　　　　clearInterval(interval);
-　　　　　　　　}
-　　　　　　　　this.countDownList = obj.day + '天' + obj.hou + '时' + obj.min + '分' + obj.sec + '秒';
+　　　　　　　　this.countDownList = obj.day + ' day ' + obj.hou + ' hour ' + obj.min + ' minute ' + obj.sec + ' second ';
 　　　　　　}, 1000);
 　　　　}
 　　}
@@ -128,3 +119,4 @@ var app = new Vue({
         
 
 })
+

@@ -3,14 +3,14 @@
     padding: 0;
 }
 .main{
-    background-color: beige;
+    background-color:#d3d1d1ee;
     margin: 0;
 }
 .contianer{
     width: 1000px;
-    height: 2000px;
+    height: 1500px;
     margin: 0 auto;
-    background-color:floralwhite;
+    border:  1px solid;
 }
 .header{
     width: 1000px;
@@ -29,7 +29,16 @@
     width: 600px;
     height: 100px;
     float: right;
-    background-color: greenyellow;
+    border: 1px solid;
+}
+.catalog a{
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.catalog a:hover{
+    text-decoration: underline;
+    color: darkgrey;
+
 }
 .catalog span {
     margin: 0 30px;
@@ -37,10 +46,42 @@
     color: #333333;
 }
 
+.footer {
+    margin: 60px  auto;
+    width: 800px;
+    text-align: center;
+    color: #b0b0b0;
+    background-color: white;
+    font-size: 10px;
 
+}
 
+.section .construction{
+    font-size: 30px;
+    font-weight: bold;
+    width: 209px;
+    height: 80px;
+    display: block;
+    margin: 200px auto;
+    background-color: #000;
+    border-radius: 10%;
+}
 
-
+.section .construction .ph1 {
+    padding: 20px;
+    position: relative;
+    top: 20px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-radius: 10%;
+}
+.section .construction .ph2 {
+    padding: 20px;
+    position: relative;
+    top: 20px;
+    background-color:#f90;
+    border-radius: 10%;
+}
 
 
 
